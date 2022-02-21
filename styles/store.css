@@ -1,0 +1,1682 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: noto-sans, "sans-serif";
+}
+
+main {
+    overflow: hidden;
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    background-color: rgba(10, 10, 12, 0.600);
+    /* background-color: rgb(10, 10, 12); */
+}
+
+header .brand {
+    color: #fdad01;
+    margin-top: 2.5%;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fdad01;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fdad01;
+    font-size: 1.1em;
+    font-weight: 00;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+    top: 0.6rem;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgba(194, 166, 8, 0.666);
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+.logogas img {
+    width: 110%;
+    height: 50px;
+    margin-top: 7%;
+    position: relative;
+    top: 0.9rem;
+    right: 3.6rem;
+
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #000000;
+}
+
+.home:before {
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(16, 32, 56, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home .content {
+    z-index: 888;
+    color: #fdad01;
+    ;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+
+.home .content.active {
+    display: block;
+}
+
+.home .content h1 {
+    font-size: 2.1em;
+    font-weight: 790;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.home .content h1 span {
+    font-size: 1.1em;
+    font-weight: 650;
+}
+
+.home .content p {
+    margin-bottom: 65px;
+    font-size: 1.3em;
+}
+
+.home .content a {
+    background: rgba(128, 125, 125, 0.234);
+    padding: 15px 35px;
+    color: #fdad01;
+    ;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.home .media-icons {
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .media-icons a {
+    color: #fdad018c;
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.home .media-icons a:hover {
+    transform: scale(1.3);
+}
+
+.home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+    background: #fdad01;
+    ;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+.video-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+
+    .home .media-icons {
+        right: 15px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-items a {
+        color: rgb(253, 250, 250);
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a:before {
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation.active .navigation-items {
+        background: rgba(8, 8, 8, 0.836);
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    .menu-btn {
+        background: url(../img/boton/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../img/boton/close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+
+@media (max-width: 560px) {
+    .home .content h1 {
+        font-size: 3em;
+        line-height: 60px;
+    }
+}
+
+
+/*         SECTION 1      */
+.contenidoProductos {
+    width: 100%;
+    height: 755px;
+    background-color: rgb(10, 10, 12);
+    background-image: url("/imagenesjs/sto_monza_milano_06-2.jpg");
+    background-size: cover;
+    filter: brightness(90%);
+}
+
+.contenidoProductos img {
+
+    position: relative;
+    top: 35.3rem;
+    background-color: #5551511c;
+}
+
+.logoprincipal img {
+    width: 10%;
+    position: relative;
+    left: 1000px;
+    top: 4.3rem;
+
+}
+
+#cards {
+    background: #000000f3;
+
+    height: 4080px;
+    /* background-image: url("/imagenesjs/fondo17.png"); */
+}
+
+#cards1 {
+    background: #000000f3;
+    height: 1780px;
+    /*   background-image: url("/imagenesjs/fondo2.jpg"); */
+}
+
+#cards2 {
+    background: rgba(0, 0, 0, 0.953);
+    height: 2500px;
+    /*   background-image: url("/imagenesjs/fondo2.jpg"); */
+}
+
+.copyright {
+    font-size: 11px;
+    color: #fdad01bd;
+    position: relative;
+    top: 2356px;
+    left: 453px;
+    width: 40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.imagen-logosar {
+    height: 0px;
+    position: relative;
+    top: 3710px;
+    left: 2rem;
+}
+
+.imagen-logosar1 {
+    height: 0px;
+    position: relative;
+    top: 1410px;
+    left: 2rem;
+}
+
+.imagen-logosar2 {
+    height: 0px;
+    position: relative;
+    top: 2130px;
+    left: 2rem;
+}
+
+.imagen-huracans img {
+    position: relative;
+    left: 740px;
+    top: 4rem;
+}
+
+#intermedio-1 {
+    height: 700px;
+    background-image: url("/imagenesjs/contenedor15.png");
+    background-size: cover;
+    filter: brightness(75%);
+
+}
+
+#intermedio-2 {
+    height: 740px;
+    background-color: #fff;
+    background-image: url("/imagenesjs/contenedor23.jpg");
+    background-size: cover;
+    filter: brightness(72%);
+}
+
+#intermedio-1 img {
+    position: relative;
+    left: 21rem;
+    bottom: 2.3rem;
+}
+
+#intermedio-2 img {
+    position: relative;
+    top: 17rem;
+    left: 5rem;
+}
+
+.logoUrus img {
+    background-color: #ffffff00;
+}
+
+.container-productos-huracan {
+    height: 600px;
+    position: relative;
+    right: 11rem;
+    border-radius: 22px;
+    background: rgba(45, 75, 54, 0.008);
+    width: 64%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 2px #5911aac7;
+    margin-bottom: 170px;
+
+}
+
+/* STO */
+.imagen-cards {
+    position: absolute;
+    left: 920px;
+    filter: brightness(78%);
+
+}
+
+.imagen-cards img {
+    width: 100%;
+    height: 595px;
+    border-radius: 15px;
+
+}
+
+/* EVO RWD SPYDER */
+.imagen-cards2 {
+    position: absolute;
+    left: 930px;
+    top: 1625px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards2 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo spyder */
+
+.imagen-cards3 {
+    position: absolute;
+    left: 930px;
+    top: 2393px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards3 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.card-lambos-huracan img {
+    width: 100%;
+    height: 277px;
+}
+
+/* evo rwd */
+
+.imagen-cards4 {
+    position: absolute;
+    left: 930px;
+    top: 3164px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards4 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo */
+
+.imagen-cards5 {
+    position: absolute;
+    left: 930px;
+    top: 3940px !important;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards5 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* AVENTADORES */
+.card-h-huracan {
+    /*  background-color: rgba(255, 255, 255, 0.104); */
+    width: 58%;
+    color: rgba(255, 255, 255, 0.926);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-huracan {
+    color: rgba(255, 255, 255, 0.912);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-huracan {
+    color: rgba(255, 255, 255, 0.933);
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*  AVENTADOR */
+
+.container-productos-aventador {
+    height: 600px;
+    position: relative;
+    left: 33.5rem;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.248);
+    width: 64%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 2px #dd6616e2;
+    margin-bottom: 170px;
+}
+
+.card-lambos-aventador img {
+    width: 100%;
+    height: 277px;
+}
+
+
+.card-h-aventador {
+    width: 58%;
+    color: rgba(255, 255, 255, 0.953);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-aventador {
+    color: rgba(255, 255, 255, 0.912);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-aventador {
+    color: rgba(255, 255, 255, 0.933);
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Aventador ultimae */
+
+.imagenA-cards1 {
+    position: absolute;
+    left: 20px;
+    top: 4880px;
+    filter: brightness(85%);
+
+}
+
+.imagenA-cards1 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.imagen-cards6 {
+    position: absolute;
+    right: 900px;
+    top: 5660px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards6 img {
+    width: 90%;
+    height: 560px;
+    border-radius: 15px;
+}
+
+.imagen-cards7 {
+    position: absolute;
+    right: 900px;
+    top: 6425px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards7 img {
+    width: 90%;
+    height: 560px;
+    border-radius: 15px;
+}
+
+
+/*  URUS */
+
+.container-productos-urus {
+    height: 600px;
+    position: relative;
+    right: 11rem;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.248);
+    width: 64%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 1px #6fd00fe3;
+    margin-bottom: 170px;
+}
+
+.card-lambos-urus img {
+    width: 100%;
+    height: 277px;
+}
+
+
+.card-h-urus {
+    width: 58%;
+    color: rgba(255, 255, 255, 0.946);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-urus {
+    color: rgb(214, 214, 214);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-urus {
+    color: rgb(209, 207, 207);
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* STO */
+.imagen-cards8 {
+    position: absolute;
+    left: 930px;
+
+    filter: brightness(85%);
+}
+
+.imagen-cards8 img {
+    width: 100%;
+    height: 590px;
+    border-radius: 15px;
+
+}
+
+/* EVO RWD SPYDER */
+.imagen-cards9 {
+    position: absolute;
+    left: 930px;
+    top: 8950px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards9 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo spyder */
+
+.imagen-cards10 {
+    position: absolute;
+    left: 942px;
+    top: 9754px;
+    filter: brightness(95%);
+
+}
+
+.imagen-cards10 img {
+    width: 105%;
+    height: 550px;
+    border-radius: 15px;
+}
+
+button {
+    width: 28%;
+    height: 33px;
+
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: 0.9rem;
+    color: rgba(255, 221, 147, 0.857);
+    background: rgb(1, 10, 253);
+    background: radial-gradient(circle, rgba(1, 10, 253, 0.8490993809633228) 0%, rgba(18, 51, 172, 0.863) 0%, rgba(1, 22, 255, 0.186) 96%);
+    border: solid 2px rgba(5, 5, 5, 0.576);
+    border-radius: 30px;
+    /* box-shadow: 2px 1px 10px 3px #097b5c27; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*          MEDIAS             */
+
+
+
+@media (max-width: 1400px){
+
+
+    
+/*         SECTION 1      */
+.contenidoProductos {
+    width: 100%;
+    height: 755px;
+    background-color: rgb(10, 10, 12);
+    background-image: url("/imagenesjs/sto_monza_milano_06-2.jpg");
+    background-size: cover;
+    filter: brightness(90%);
+}
+
+.contenidoProductos img {
+
+    position: relative;
+    top: 35.3rem;
+    background-color: #5551511c;
+}
+
+.logoprincipal img {
+    width: 10%;
+    position: relative;
+    left: 1000px;
+    top: 4.3rem;
+
+}
+.imagen-huracans img {
+    position: relative;
+    left: 240px;
+    top: 4rem;
+}
+
+#cards {
+    background: #000000f3;
+    width: 100%;
+    height: 4380px;
+    /* background-image: url("/imagenesjs/fondo17.png"); */
+}
+
+#cards1 {
+    width: 100%;
+    background: #000000f3;
+    height: 1780px;
+    /*   background-image: url("/imagenesjs/fondo2.jpg"); */
+}
+
+#cards2 {
+    background: rgba(0, 0, 0, 0.953);
+    height: 2500px;
+    width: 100%;
+    /*   background-image: url("/imagenesjs/fondo2.jpg"); */
+}
+
+.copyright {
+    font-size: 11px;
+    color: #fdad01bd;
+    position: relative;
+    top: 2356px;
+    left: 405px;
+    width: 40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.imagen-logosar {
+    height: 0px;
+    position: relative;
+    top: 4066px;
+    left: 7rem;
+}
+
+.imagen-logosar1 {
+    height: 0px;
+    position: relative;
+    top: 1490px;
+    left: 10rem;
+}
+
+.imagen-logosar2 {
+    height: 0px;
+    position: relative;
+    top: 2130px;
+    left: 7rem;
+}
+
+
+#intermedio-1 {
+    width: 100%;
+    height: 700px;
+    background-image: url("/imagenesjs/contenedor15.png");
+    background-size: cover;
+    filter: brightness(75%);
+
+}
+
+#intermedio-2 {
+    width: 100%;
+    height: 740px;
+    background-color: #fff;
+    background-image: url("/imagenesjs/contenedor23.jpg");
+    background-size: cover;
+    filter: brightness(72%);
+}
+
+.container-productos-huracan {
+    height: 657px;
+    position: relative;
+    right: 11rem;
+    border-radius: 22px;
+    background: rgba(45, 75, 54, 0.008);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 2px #5911aac7;
+    margin-bottom: 170px;
+
+}
+.card-lambos-huracan img{
+    width: 40%;
+}
+.card-lambos-aventador img{
+    width: 70%;
+}
+.card-lambos-huracan img{
+    width: 40%;
+}
+
+/* STO */
+.imagen-cards {
+    position: absolute;
+    left: 775px;
+    filter: brightness(78%);
+
+}
+#cards img{
+    width: 90%;
+}
+#cards1 img{
+    width: 80%;
+}
+#cards2 img{
+    width: 90%;
+}
+.card-lambos-aventador{
+    width: 10% !important;
+}
+.imagen-cards img {
+    width: 100%;
+    height: 595px;
+    border-radius: 15px;
+
+}
+
+/* EVO RWD SPYDER */
+.imagen-cards2 {
+    position: absolute;
+    left: 770px;
+    top: 1705px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards2 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo spyder */
+
+.imagen-cards3 {
+    position: absolute;
+    left: 770px;
+    top: 2553px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards3 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.card-lambos-huracan img {
+    width: 100%;
+    height: 277px;
+}
+
+/* evo rwd */
+
+.imagen-cards4 {
+    position: absolute;
+    left: 770px;
+    top: 3364px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards4 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo */
+
+.imagen-cards5 {
+    position: absolute;
+    left: 770px;
+    top: 4190px !important;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards5 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* AVENTADORES */
+.card-h-huracan {
+    /*  background-color: rgba(255, 255, 255, 0.104); */
+    width: 58%;
+    color: rgba(255, 255, 255, 0.926);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-huracan {
+    color: rgba(255, 255, 255, 0.912);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-huracan {
+    color: rgba(255, 255, 255, 0.933);
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*  AVENTADOR */
+
+.container-productos-aventador {
+    height: 600px;
+    position: relative;
+    left: 26.5rem;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.248);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 2px #dd6616e2;
+    margin-bottom: 170px;
+}
+
+.card-lambos-aventador img {
+    width: 100%;
+    height: 277px;
+}
+
+
+.card-h-aventador {
+    width: 58%;
+    color: rgba(255, 255, 255, 0.953);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-aventador {
+    color: rgba(255, 255, 255, 0.912);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-aventador {
+    color: rgba(255, 255, 255, 0.933);
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Aventador ultimae */
+
+
+
+.imagen-cards6 {
+    position: absolute;
+    right: 710px;
+    top: 5960px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards6 img {
+    width: 90%;
+    height: 560px;
+    border-radius: 15px;
+}
+
+.imagen-cards7 {
+    position: absolute;
+    right: 710px;
+    top: 6725px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards7 img {
+    width: 90%;
+    height: 560px;
+    border-radius: 15px;
+}
+
+
+/*  URUS */
+
+.container-productos-urus {
+    height: 600px;
+    position: relative;
+    right: 11rem;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.248);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 1px #6fd00fe3;
+    margin-bottom: 170px;
+}
+
+.card-lambos-urus img {
+    width: 100%;
+    height: 277px;
+}
+
+
+.card-h-urus {
+    width: 58%;
+    color: rgba(255, 255, 255, 0.946);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-urus {
+    color: rgb(214, 214, 214);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-urus {
+    color: rgb(209, 207, 207);
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* URUS */
+.imagen-cards8 {
+    position: absolute;
+    left: 780px;
+
+    filter: brightness(85%);
+}
+
+.imagen-cards8 img {
+    width: 100%;
+    height: 590px;
+    border-radius: 15px;
+
+}
+
+
+.imagen-cards9 {
+    position: absolute;
+    left: 780px;
+    top: 9250px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards9 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+
+.imagen-cards10 {
+    position: absolute;
+    left: 780px;
+    top: 10034px;
+    filter: brightness(95%);
+
+}
+
+.imagen-cards10 img {
+    width: 105%;
+    height: 550px;
+    border-radius: 15px;
+}
+
+button {
+    width: 28%;
+    height: 33px;
+
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: 0.9rem;
+    color: rgba(255, 221, 147, 0.857);
+    background: rgb(1, 10, 253);
+    background: radial-gradient(circle, rgba(1, 10, 253, 0.8490993809633228) 0%, rgba(18, 51, 172, 0.863) 0%, rgba(1, 22, 255, 0.186) 96%);
+    border: solid 2px rgba(5, 5, 5, 0.576);
+    border-radius: 30px;
+    /* box-shadow: 2px 1px 10px 3px #097b5c27; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  /* MEDIA 1080 */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1080px){
+
+
+    
+/*         SECTION 1      */
+.contenidoProductos {
+    width: 100%;
+    height: 755px;
+    background-color: rgb(10, 10, 12);
+    background-image: url("/imagenesjs/sto_monza_milano_06-2.jpg");
+    background-size: cover;
+    filter: brightness(90%);
+}
+
+.contenidoProductos img {
+
+    position: relative;
+    top: 35.3rem;
+    background-color: #5551511c;
+}
+
+.logoprincipal img {
+    width: 10%;
+    position: relative;
+    left: 1000px;
+    top: 4.3rem;
+
+}
+.imagen-huracans img {
+    position: relative;
+    left: 240px;
+    top: 4rem;
+}
+
+#cards {
+    background: #000000f3;
+    width: 100%;
+    height: 4380px;
+    /* background-image: url("/imagenesjs/fondo17.png"); */
+}
+
+#cards1 {
+    width: 100%;
+    background: #000000f3;
+    height: 1780px;
+    /*   background-image: url("/imagenesjs/fondo2.jpg"); */
+}
+
+#cards2 {
+    background: rgba(0, 0, 0, 0.953);
+    height: 2500px;
+    width: 100%;
+    /*   background-image: url("/imagenesjs/fondo2.jpg"); */
+}
+
+.copyright {
+    font-size: 11px;
+    color: #fdad01bd;
+    position: relative;
+    top: 2360px;
+    left: 265px;
+    width: 30%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.imagen-logosar {
+    height: 0px;
+    position: relative;
+    top: 4150px;
+    left: 3rem;
+}
+
+.imagen-logosar1 {
+    height: 0px;
+    position: relative;
+    top: 1550px;
+    left: 4rem;
+}
+
+.imagen-logosar2 {
+    height: 0px;
+    position: relative;
+    top: 2253px;
+    left: 3rem;
+}
+
+
+#intermedio-1 {
+    width: 100%;
+    height: 700px;
+    background-image: url("/imagenesjs/contenedor15.png");
+    background-size: cover;
+    filter: brightness(75%);
+
+}
+
+#intermedio-2 {
+    width: 100%;
+    height: 740px;
+    background-color: #fff;
+    background-image: url("/imagenesjs/contenedor23.jpg");
+    background-size: cover;
+    filter: brightness(72%);
+}
+
+.container-productos-huracan {
+    height: 657px;
+    position: relative;
+    right: 11rem;
+    border-radius: 22px;
+    background: rgba(45, 75, 54, 0.008);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 2px #5911aac7;
+    margin-bottom: 170px;
+
+}
+.card-lambos-huracan img{
+    width: 40%;
+}
+.card-lambos-aventador img{
+    width: 70%;
+}
+.card-lambos-huracan img{
+    width: 40%;
+}
+
+/* STO */
+.imagen-cards {
+    position: absolute;
+    left: 525px;
+    filter: brightness(78%);
+
+}
+#cards img{
+    width: 80%;
+}
+#cards1 img{
+    width: 80%;
+}
+#cards2 img{
+    width: 90%;
+}
+.card-lambos-aventador{
+    width: 10% !important;
+}
+.imagen-cards img {
+    width: 100%;
+    height: 595px;
+    border-radius: 15px;
+
+}
+
+/* EVO RWD SPYDER */
+.imagen-cards2 {
+    position: absolute;
+    left: 525px;
+    top: 1705px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards2 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo spyder */
+
+.imagen-cards3 {
+    position: absolute;
+    left: 525px;
+    top: 2553px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards3 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.card-lambos-huracan img {
+    width: 100%;
+    height: 277px;
+}
+
+/* evo rwd */
+
+.imagen-cards4 {
+    position: absolute;
+    left: 525px;
+    top: 3364px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards4 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* evo */
+
+.imagen-cards5 {
+    position: absolute;
+    left: 525px;
+    top: 4190px !important;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards5 img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* AVENTADORES */
+.card-h-huracan {
+    /*  background-color: rgba(255, 255, 255, 0.104); */
+    width: 58%;
+    color: rgba(255, 255, 255, 0.926);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-huracan {
+    color: rgba(255, 255, 255, 0.912);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-huracan {
+    color: rgba(255, 255, 255, 0.933);
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*  AVENTADOR */
+
+.container-productos-aventador {
+    height: 600px;
+    position: relative;
+    left: 20.5rem;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.248);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 2px #dd6616e2;
+    margin-bottom: 170px;
+}
+
+.card-lambos-aventador img {
+    width: 100%;
+    height: 277px;
+}
+
+
+.card-h-aventador {
+    width: 58%;
+    color: rgba(255, 255, 255, 0.953);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-aventador {
+    color: rgba(255, 255, 255, 0.912);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-aventador {
+    color: rgba(255, 255, 255, 0.933);
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Aventador ultimae */
+
+
+
+.imagen-cards6 {
+    position: absolute;
+    right: 500px;
+    top: 5960px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards6 img {
+    width: 90%;
+    height: 560px;
+    border-radius: 15px;
+}
+
+.imagen-cards7 {
+    position: absolute;
+    right: 500px;
+    top: 6725px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards7 img {
+    width: 90%;
+    height: 560px;
+    border-radius: 15px;
+}
+
+
+/*  URUS */
+
+.container-productos-urus {
+    height: 600px;
+    position: relative;
+    right: 11rem;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.248);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    box-shadow: 1px 2px 10px 1px #6fd00fe3;
+    margin-bottom: 170px;
+}
+
+.card-lambos-urus img {
+    width: 100%;
+    height: 277px;
+}
+
+
+.card-h-urus {
+    width: 58%;
+    color: rgba(255, 255, 255, 0.946);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p-urus {
+    color: rgb(214, 214, 214);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-p2-urus {
+    color: rgb(209, 207, 207);
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* URUS */
+.imagen-cards8 {
+    position: absolute;
+    left: 550px;
+    filter: brightness(85%);
+}
+
+.imagen-cards8 img {
+    width: 75% !important;
+    height: 590px;
+    border-radius: 15px;
+
+}
+
+
+.imagen-cards9 {
+    position: absolute;
+    left: 550px;
+    top: 9250px;
+    filter: brightness(85%);
+
+}
+
+.imagen-cards9 img {
+    width: 80% !important;
+    height: 600px;
+    border-radius: 15px;
+}
+
+
+.imagen-cards10 {
+    position: absolute;
+    left: 550px;
+    top: 10074px;
+    filter: brightness(95%);
+
+}
+
+.imagen-cards10 img {
+    width: 80% !important;
+    height: 550px;
+    border-radius: 15px;
+}
+
+button {
+    width: 28%;
+    height: 33px;
+
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: 0.9rem;
+    color: rgba(255, 221, 147, 0.857);
+    background: rgb(1, 10, 253);
+    background: radial-gradient(circle, rgba(1, 10, 253, 0.8490993809633228) 0%, rgba(18, 51, 172, 0.863) 0%, rgba(1, 22, 255, 0.186) 96%);
+    border: solid 2px rgba(5, 5, 5, 0.576);
+    border-radius: 30px;
+    /* box-shadow: 2px 1px 10px 3px #097b5c27; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+}

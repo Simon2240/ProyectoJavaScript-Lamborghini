@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <title>Contact</title>
+    <link rel="icon" type="image/jpg" href="/imagenesjs/logo-Lamborghini-contact.png">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="logogas"><img src="/imagenesjs/logo-Lamborghini-contact.png" alt="logo"></div>
+            <a href="/index.html" class="brand">Lamborghini</a>
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="/index.html">HOME</a>
+                    <a href="/paginas/store.html">STORE</a>
+                    <a href="/paginas/history.html">HISTORY</a>
+                    <a href="/paginas/contact.html">CONTACT</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="contact">
+            <div class="u-wrapper">
+                <div class="contact-content">
+
+                    <form id="form" action="" class="form">
+                        <h3 class="tag"><span>REQUEST ASSIGNMENT</span></h3>
+                        <div class="one-form">
+                            <label for="name" class="label-name">First name<span>*</span></label>
+                            <input class="input-name" name="name" required type="text"
+                                style="color: rgba(255, 255, 255, 0.885)" id="name">
+                            <label for="email" class="label-email">Email<span>*</span></label>
+                            <input class="input-name" name="email " type="text" id="email"
+                                style="color: rgba(255, 255, 255, 0.885);" required type="text ">
+                        </div>
+                        <div class="two-form">
+                            <label for="message" class="label-message">Message</label>
+                            <textarea name="message" id="text-message" cols="30" rows="10"></textarea>
+                            <button type="submit" class="btn-primary" onclick="guardarlocalstorage()">Send</button>
+                        </div>
+                    </form>
+                    <!-- <a href="mailto:brestsimon9@gmail.com" id="send-mail">Mail</a> -->
+                    <div class="info-contact">
+                        <p class="p-contact">Once our form is finished and your request is completed, we will send you
+                            an Email in which you will have your order number and date to present yourself at our
+                            facilities to acquire a car.</p>
+                            <img src="/imagenesjs/logo-Lamborghini-contact.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="mapa-api">
+            <div id="map"></div>
+        </section>
+
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6GWmYMR66q1LDMb5GlkUkvzAq5zFBOzk&callback=initMap&v=weekly" async></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="/js/contac.js"></script>
+</body>
+
+
+</html>
