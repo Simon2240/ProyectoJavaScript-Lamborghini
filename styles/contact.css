@@ -317,7 +317,7 @@ section {
 
 .contact {
     background-color: rgba(255, 255, 255, 0.631);
-    background-image: url("/imagenesjs/fondo20.jpg");
+    background-image: url("../imagenesjs/fondo20.jpg");
     background-size: cover;
     height: 758px;
 }

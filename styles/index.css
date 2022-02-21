@@ -322,12 +322,6 @@ section {
     margin-top: 7.3rem;
     height: 800px;
     background-color: rgb(158, 158, 157);
-    /* display: grid;
-    grid-template-columns: repeat(3fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "contenedor1 contenedor2 contenedor3"
-    ; */
 }
 
 .carousel-item img {

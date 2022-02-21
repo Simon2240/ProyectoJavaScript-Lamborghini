@@ -304,7 +304,7 @@ section {
     width: 100%;
     height: 755px;
     background-color: rgb(10, 10, 12);
-    background-image: url("/imagenesjs/sto_monza_milano_06-2.jpg");
+    background-image: url("../imagenesjs/sto_monza_milano_06-2.jpg");
     background-size: cover;
     filter: brightness(90%);
 }
@@ -383,7 +383,7 @@ section {
 
 #intermedio-1 {
     height: 700px;
-    background-image: url("/imagenesjs/contenedor15.png");
+    background-image: url("../imagenesjs/contenedor15.png");
     background-size: cover;
     filter: brightness(75%);
 
@@ -392,7 +392,7 @@ section {
 #intermedio-2 {
     height: 740px;
     background-color: #fff;
-    background-image: url("/imagenesjs/contenedor23.jpg");
+    background-image: url("../imagenesjs/contenedor23.jpg");
     background-size: cover;
     filter: brightness(72%);
 }
@@ -843,7 +843,7 @@ button {
 #intermedio-1 {
     width: 100%;
     height: 700px;
-    background-image: url("/imagenesjs/contenedor15.png");
+    background-image: url("../imagenesjs/contenedor15.png");
     background-size: cover;
     filter: brightness(75%);
 
@@ -853,7 +853,7 @@ button {
     width: 100%;
     height: 740px;
     background-color: #fff;
-    background-image: url("/imagenesjs/contenedor23.jpg");
+    background-image: url("../imagenesjs/contenedor23.jpg");
     background-size: cover;
     filter: brightness(72%);
 }

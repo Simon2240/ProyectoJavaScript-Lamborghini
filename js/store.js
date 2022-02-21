@@ -9,7 +9,7 @@ const productos = [
     { id: "6", nombre: "Lamborghini Aventador Ultimae Roadster", class: 2, detalle: "Lamborghini Aventador Ultimae Roadster is available right now!", categoria: "Familiar", precio: "1.500.000", img: "../imagenesjs/aventadorAzul.png" },
     { id: "7", nombre: "Lamborghini Aventador Ultimae", class: 2, detalle: "Lamborghini Aventador Ultimae is available right now!", categoria: "Familiar", precio: "1.000.000", img: "../imagenesjs/aventadorGris.png" },
 
-    { id: "8", nombre: "Lamborghini URUS", class: 3, detalle: "Lamborghini URUS is available right now!", categoria: "Familiar", precio: "850.000", img: "/imagenesjs/urusamarilla.png" },
+    { id: "8", nombre: "Lamborghini URUS", class: 3, detalle: "Lamborghini URUS is available right now!", categoria: "Familiar", precio: "850.000", img: "../imagenesjs/urusamarilla.png" },
     { id: "9", nombre: "Lamborghini URUS Roadster", class: 3, detalle: "Lamborghini URUS is available right now!", categoria: "Familiar", precio: "850.000", img: "../imagenesjs/urusnegra.png" },
     { id: "10", nombre: "Lamborghini URUS Pear Capsule", class: 3, detalle: "Lamborghini URUS is available right now!", categoria: "Familiar", precio: "870.000", img: "../imagenesjs/urusverde.png" }
     
